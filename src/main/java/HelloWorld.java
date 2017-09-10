@@ -14,6 +14,6 @@ public class HelloWorld {
      * @param unused unused input parameters.
      */
     public static void main(final String[] unused) {
-        Zen.drawText("Hello, world!", 100, 200);
+        Zen.drawText("ayyyy", 100, 200);
     }
 }
