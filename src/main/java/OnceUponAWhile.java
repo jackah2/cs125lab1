@@ -20,6 +20,7 @@ public class OnceUponAWhile {
          * Set a new font face. Then draw some text on the screen.
          */
         Zen.setFont("Times-50");
+        Zen.setColor(0, 255, 0);
         Zen.drawText("Once", 0, 100);
 
         /*
@@ -53,7 +54,7 @@ public class OnceUponAWhile {
         while (shadeColor > 0) {
             Zen.setColor(shadeColor, shadeColor, shadeColor);
             Zen.fillRect(0, 0, Zen.getZenWidth(), Zen.getZenHeight());
-            Zen.sleep(1);
+            Zen.sleep(10);
             shadeColor = shadeColor - 1;
         }
 
