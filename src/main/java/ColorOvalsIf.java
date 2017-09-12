@@ -25,13 +25,19 @@ public class ColorOvalsIf {
              */
             Zen.waitForClick();
 
+            // Wait for a second mouse click.
+            Zen.waitForClick();
+
             /*
              * Get the click location and use it to set the oval location and color.
              */
             int x = Zen.getMouseX();
             int y = Zen.getMouseY();
 
-            Zen.fillOval(x - 16, y - 16, 32, 32);
+            int width = 50;
+            int height = 50;
+
+            Zen.fillRect(x - width / 2, y - height / 2, width, height);
             Zen.setColor(x, y, x + y);
         }
     }
