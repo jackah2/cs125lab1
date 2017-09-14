@@ -13,8 +13,9 @@ public class Paint {
      * held down.
      *
      * @param unused unused input parameters
+     * @throws InterruptedException
      */
-    public static void main(final String[] unused) {
+    public static void main(final String[] unused) throws InterruptedException {
 
         /*
          * Zen allows us to specific a window size during creation, as well as certain options. The
@@ -41,10 +42,13 @@ public class Paint {
                  * Grab random numbers between -25 and 25 and use them to generate a white square at
                  * a position nearby the mouse click.
                  */
-                double x2 = x - 25 + 50 * Math.random();
-                double y2 = y - 25 + 50 * Math.random();
+                double radius = 25 * Math.random();
+                double rad = Math.toRadians(360 * Math.random());
+                double x2 = x + radius * Math.cos(rad);
+                double y2 = y + radius * Math.sin(rad);
 
                 Zen.fillRect((int) x2, (int) y2, 1, 1);
+                Thread.sleep(10);
             }
         }
     }
