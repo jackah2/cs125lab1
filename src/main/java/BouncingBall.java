@@ -26,12 +26,12 @@ public class BouncingBall {
              * Draw the ball and the pause.
              */
             Zen.fillOval((int) x, (int) y, 4, 4);
-            Zen.sleep(20);
+            Zen.sleep(10);
 
             /*
              * Compute new velocity. Flip as needed.
              */
-            velocityY = velocityY + 1;
+            velocityY = velocityY + .5;
             if (y + velocityY > 400) {
                 velocityY = -1 * Math.abs(0.9 * velocityY);
             }
