@@ -25,17 +25,17 @@ public class ArrowKeys {
         File spriteFile = new File(classLoader.getResource("sprite1.gif").getFile());
 
         while (Zen.isRunning()) {
-            if (y > 0 && Zen.isVirtualKeyPressed(KeyEvent.VK_UP)) {
-                y = y - 4;
+            if (y > 0 && Zen.isVirtualKeyPressed(KeyEvent.VK_W)) {
+                y = y - 1;
             }
-            if (y < Zen.getZenHeight() - 32 && Zen.isVirtualKeyPressed(KeyEvent.VK_DOWN)) {
-                y = y + 4;
+            if (y < Zen.getZenHeight() - 32 && Zen.isVirtualKeyPressed(KeyEvent.VK_S)) {
+                y = y + 1;
             }
-            if (x > 0 && Zen.isVirtualKeyPressed(KeyEvent.VK_LEFT)) {
-                x = x - 4;
+            if (x > 0 && Zen.isVirtualKeyPressed(KeyEvent.VK_A)) {
+                x = x - 1;
             }
-            if (x < Zen.getZenWidth() - 32 && Zen.isVirtualKeyPressed(KeyEvent.VK_RIGHT)) {
-                x = x + 4;
+            if (x < Zen.getZenWidth() - 32 && Zen.isVirtualKeyPressed(KeyEvent.VK_D)) {
+                x = x + 1;
             }
             Zen.drawImage(spriteFile.getAbsolutePath(), x, y);
             Zen.flipBuffer();
