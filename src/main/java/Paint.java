@@ -13,7 +13,7 @@ public class Paint {
      * held down.
      *
      * @param unused unused input parameters
-     * @throws InterruptedException
+     * @throws InterruptedException thread.sleep()
      */
     public static void main(final String[] unused) throws InterruptedException {
 
